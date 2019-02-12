@@ -10,17 +10,16 @@ git submodule update --init --recursive
 
 #### Important Install Note
 The Android SDK is required for this project to compile. To get set up for this project:
-- Install and configure the Android SDK:
-    -- `brew install android-sdk` on Mac OS X
-    -- `sudo apt-get install android-sdk` on Ubuntu-Based Linux
-    -- `echo 'export ANDROID_HOME=/usr/lib/android-sdk' >> ~/.bashrc`
-    -- `echo 'export PATH=$PATH:$ANDROID_HOME/tools/bin' >> ~/.bashrc`
+- Install and configure the Android SDK (on Ubuntu-based Linux):
+```bash
+sudo apt-get install android-sdk
+echo 'export ANDROID_HOME=/usr/lib/android-sdk' >> ~/.bashrc
+echo 'export PATH=$PATH:$ANDROID_HOME/tools/bin' >> ~/.bashrc
+```
 
-- Install API 15 SDK Platform (Android 4.0.3):
-    -- `sdkmanager "platforms;android-15"`
+- Install API 15 SDK Platform (Android 4.0.3): `sdkmanager "platforms;android-15"`
 
-- Install Android Build Tools 21.1.2:
-    -- `sdkmanager "build-tools;21.1.2"`
+- Install Android Build Tools 21.1.2: `sdkmanager "build-tools;21.1.2"`
 
 ## Compile
 Gradle is the build manager for these projects. Some commands you can run:
