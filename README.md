@@ -2,7 +2,7 @@
 ## Install
 Somewhere on your computer:
 ```bash
-git clone https://github.com/c-h-/android_core
+git clone https://github.com/sidneyrdc/android_core
 cd android_core
 git checkout indigo
 git submodule update --init --recursive
@@ -10,10 +10,17 @@ git submodule update --init --recursive
 
 #### Important Install Note
 The Android SDK is required for this project to compile. To get set up for this project:
-- Install and configure the Android SDK (`brew install android-sdk` on Mac OS X with Homebrew installed)
-- Run `android`
-- Install API 15 SDK Platform (Android 4.0.3)
-- Install Android Build Tools 21.1.2
+- Install and configure the Android SDK:
+    -- `brew install android-sdk` on Mac OS X
+    -- `sudo apt-get install android-sdk` on Ubuntu-Based Linux
+    -- `echo 'export ANDROID_HOME=/usr/lib/android-sdk' >> ~/.bashrc`
+    -- `echo 'export PATH=$PATH:$ANDROID_HOME/tools/bin' >> ~/.bashrc`
+
+- Install API 15 SDK Platform (Android 4.0.3):
+    -- `sdkmanager "platforms;android-15"`
+
+- Install Android Build Tools 21.1.2:
+    -- `sdkmanager "build-tools;21.1.2"`
 
 ## Compile
 Gradle is the build manager for these projects. Some commands you can run:
@@ -27,8 +34,7 @@ To get the apk file of a build, navigate to the child project you want, and then
 The `clean` command simply clears out cached/past build files.
 
 ## Install, Debug
-For commands to install an apk to a device and see logs, see the commands in `android_sensors_driver/build_and_run.sh`.
-
+For commands to install an apk to a device and see logs, see the commands in `android_sensors_driver/buildAll.sh`.
 
 ## Original Readme:
 rosjava is the first pure Java implementation of ROS.
@@ -48,3 +54,4 @@ Looking for a robot platform to experiment with ROS, Android, and cloud robotics
 Visit the rosjava_core wiki for instructions.
 
 http://ros.org/wiki/android_core
+
