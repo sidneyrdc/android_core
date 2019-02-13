@@ -1,0 +1,10 @@
+<launch>
+    <remap from="turtle1" to="virtual_joystick"/>
+    <remap from="/virtual_joystick/pose" to="/odom"/>
+	<node
+		pkg="turtlesim"
+		type="turtlesim_node"
+		name="turtlesim_node"
+	/>
+</launch>
+
