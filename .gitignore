@@ -22,3 +22,4 @@ build-log.xml
 /android_camera_driver/
 *~
 *.log
+/CATKIN_IGNORE
